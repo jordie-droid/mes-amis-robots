@@ -1,0 +1,233 @@
+@font-face {
+  font-family: "sega";
+  src: url(../fonts/SEGA.TTF);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(rgba(7, 27, 82, 1)),
+    to(rgba(0, 128, 128, 1))
+  );
+  background: -webkit-linear-gradient(
+    right,
+    rgba(7, 27, 82, 1) 0%,
+    rgba(0, 128, 128, 1) 100%
+  );
+}
+.lds-roller {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.main-title {
+  font-family: "sega";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 3em;
+  color: #64ccc5;
+  margin: 50px;
+}
+
+input {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #19a974;
+  background-color: #cdecff;
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  width: 230px;
+  height: 40px;
+  margin: 0;
+  padding: 25px;
+}
+
+.flex-box-header-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.274);
+  font-family: sans-serif;
+  z-index: 9;
+}
+
+.modal-visible {
+  display: "";
+}
+
+.modal-hide {
+  display: none;
+}
+
+.modal div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  color: black;
+}
+
+.modal h2 {
+  margin: 20px;
+}
+
+.modal button {
+  background-color: #19a974;
+  color: #fff;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+  padding: 10px;
+  border: none;
+  outline: none;
+  margin: 20px;
+  align-self: flex-start;
+  border-radius: 5px;
+}
+
+.modal button:hover {
+  cursor: pointer;
+  background-color: #64ccc5;
+}
+
+.modal button:active {
+  outline: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #9eebcf;
+  margin: 8px;
+  padding: 16px;
+  border-radius: 0.5rem;
+  font-family: sans-serif;
+}
+
+.card:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  transform: scale(1.05);
+}
+
+.card h2,
+p {
+  margin-bottom: 20px;
+}
+
+.image-robot {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

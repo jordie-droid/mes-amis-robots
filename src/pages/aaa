@@ -1,0 +1,12 @@
+
+  for(let i = 0; i < tableLength; i++){
+    let lastValueIndex = tableLength - 1 -i;
+    console.log(lastValueIndex)
+    /*if(newSen[i].length > newSen[i + 1].length){
+      longestWord = newSen[i];
+    } else if(newSen[i].length < newSen[i + 1].length){
+      longestWord = newSen[i + 1];
+    } else {
+      longestWord = newSen[i].toString();
+    }*/
+  //console.log(longestWord);
