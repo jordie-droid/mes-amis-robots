@@ -41,15 +41,17 @@ export default function App(props) {
   const showTitleAndInputSearch = () => {
     if (dataTable.length === 0) {
       return (
-        <div className="lds-roller">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className="loader-container">
+          <div className="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
       );
     } else {
@@ -62,13 +64,13 @@ export default function App(props) {
     }
   };
 
-  const getDataForSpecifiedRobot = urlRobot => {
+  const getDataForSpecifiedRobot = (urlRobot) => {
     fetch(urlRobot)
       .then((response) => response.json())
       .then((data) => setDataRobot(data));
   };
 
-  const showMoreInformation = idData => {
+  const showMoreInformation = (idData) => {
     setPhotoRobot(`${urlPhoto}${idData}`);
     let urlRobot = `${urlData}/${idData}`;
     getDataForSpecifiedRobot(urlRobot);
